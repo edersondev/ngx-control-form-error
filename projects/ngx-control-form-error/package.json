@@ -3,6 +3,21 @@
   "version": "0.0.1",
   "description":"This package handles error messages from a form input",
   "author": "Ederson Ferreira (ederson.dev@gmail.com)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/edersondev/ngx-control-formerror.git"
+  },
+  "bugs": {
+    "url": "https://github.com/edersondev/ngx-control-formerror/issues"
+  },
+  "homepage": "https://github.com/edersondev/ngx-control-formerror",
+  "keywords": [
+    "angular",
+    "angular-material",
+    "form",
+    "control-error"
+  ],
+  "license": "MIT",
   "peerDependencies": {
     "@angular/common": "^8.2.14",
     "@angular/core": "^8.2.14"
