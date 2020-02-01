@@ -1,6 +1,6 @@
 {
   "name": "ngx-control-form-error",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description":"This package handles error messages from a form input",
   "author": "Ederson Ferreira (ederson.dev@gmail.com)",
   "repository": {
