@@ -11,7 +11,7 @@ Abra o terminal e execute o seguinte comando dentro do seu projeto:
 ## Como usar
 Dentro do seu arquivo de módulo faça a importação do módulo:
 
-    import { NgxControlFormErrorModule } from  'ngx-control-form-error';
+    import { NgxControlFormErrorModule } from '@edersondev/ngx-control-form-error';
 E adicione NgxControlFormErrorModule na propriedade *imports*.
 
 ## Exemplo de uso
