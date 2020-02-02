@@ -1,24 +1,35 @@
 # NgxControlFormError
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.2.14.
+Está biblioteca foi gerada com angular cli versão 8.2.14 e tem como objetivo controlar as mensagens de erro do formulário reativo do angular.
 
-## Code scaffolding
+## Instalação
 
-Run `ng generate component component-name --project NgxControlFormError` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project NgxControlFormError`.
-> Note: Don't forget to add `--project NgxControlFormError` or else it will be added to the default project in your `angular.json` file. 
+Abra o terminal e execute o seguinte comando dentro do seu projeto:
 
-## Build
+    npm i @edersondev/ngx-control-form-error --save
 
-Run `ng build NgxControlFormError` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Como usar
+Dentro do seu arquivo de módulo faça a importação do módulo:
 
-## Publishing
+    import { NgxControlFormErrorModule } from  'ngx-control-form-error';
+E adicione NgxControlFormErrorModule na propriedade *imports*.
 
-After building your library with `ng build NgxControlFormError`, go to the dist folder `cd dist/ngx-control-form-error` and run `npm publish`.
+## Exemplo de uso
+Dentro do componente instancie um formulário e adicione um campo com validação:
 
-## Running unit tests
+    form:FormGroup;
+    constructor(private  _fb:FormBuilder) { }
+    ngOnInit() {
+	    this.form = this._fb.group({
+		    nome:[null,[Validators.required, Validators.minLength(3), Validators.maxLength(10)]],
+	    });
+    }
+E no html ficaria da seguinte forma:
 
-Run `ng test NgxControlFormError` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+    <form  [formGroup]="form">
+    <mat-form-field>
+	    <input  formControlName="nome"  matInput  placeholder="Nome completo">
+	    <mat-error  [controlErrors]="form"  [fieldName]="'nome'"></mat-error>
+	</mat-form-field>
+    </form>
+A tag mat-error recebe dois parâmetros o controlErrors e o fieldName, a diretiva controErrors deve receber um formGroup e o fieldName uma string com o nome do campo.

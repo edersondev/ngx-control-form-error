@@ -1,7 +1,7 @@
 {
-  "name": "ngx-control-form-error",
-  "version": "0.1.0",
-  "description":"This package handles error messages from a form input",
+  "name": "@edersondev/ngx-control-form-error",
+  "version": "0.2.0",
+  "description":"Este pacote serve para controlar as mensagens de erro do formulário reativo do angular",
   "author": "Ederson Ferreira (ederson.dev@gmail.com)",
   "repository": {
     "type": "git",
@@ -20,6 +20,7 @@
   "license": "MIT",
   "peerDependencies": {
     "@angular/common": "^8.2.14",
-    "@angular/core": "^8.2.14"
+    "@angular/core": "^8.2.14",
+    "ngx-take-until-destroy": "^5.4.0"
   }
 }

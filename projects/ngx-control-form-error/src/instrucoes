@@ -1,0 +1,5 @@
+Build
+Run ng build NgxControlFormError to build the project. The build artifacts will be stored in the dist/ directory.
+
+Publishing
+After building your library with ng build NgxControlFormError, go to the dist folder cd dist/ngx-control-form-error and run npm publish.
