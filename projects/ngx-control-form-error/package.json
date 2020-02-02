@@ -18,11 +18,9 @@
     "control-error"
   ],
   "license": "MIT",
-  "dependencies": {
-    "ngx-take-until-destroy": "^5.4.0"
-  },
   "peerDependencies": {
     "@angular/common": "^8.2.14",
-    "@angular/core": "^8.2.14"
+    "@angular/core": "^8.2.14",
+    "ngx-take-until-destroy": "^5.4.0"
   }
 }
