@@ -8,10 +8,7 @@ export const defaultErrors = {
   matDatepickerParse: (matDatepickerParse) => (matDatepickerParse.text == 0 ? 'Informe uma data válida' : `O valor ${matDatepickerParse.text} é inválido`),
   maxlength: ({ requiredLength, actualLength }) => `A quantidade máxima de caracteres é ${requiredLength} mas o campo possui ${actualLength}`,
   minlength: ({ requiredLength, actualLength }) => `A quantidade mínima de caracteres é ${requiredLength} mas o campo possui ${actualLength}`,
-  pattern: (objPattern) => {
-    console.log(objPattern);
-    return `O valor ${objPattern.actualValue} não é compatível com o formato ${objPattern.pattern}`;
-  }
+  pattern: (objPattern) => `O valor '${objPattern.actualValue}' não é compatível com o formato ${objPattern.requiredPattern}`
 }
 
 export const FORM_MSG_ERRORS = new InjectionToken('FORM_MSG_ERRORS', {
